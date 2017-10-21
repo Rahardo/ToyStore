@@ -83,7 +83,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 						<?php if ( isset($this->session->userdata['logged_in'])){ 
 							$username = ($this->session->userdata['logged_in']['username']);
-							$email = ($this->session->userdata['logged_in']['email']);
 							?>
 
 							<ul class="unstyled-list list-inline">
@@ -92,7 +91,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<div class="clearfix"> </div>
 							</ul>
 
-						<?php }else { ?>
+						<?php } elseif( isset($this->session->userdata['admin'])){ 
+							$username = ($this->session->userdata('admin'));
+							?>
+
+							<ul class="unstyled-list list-inline">
+								<li><a class="login" ><?php echo $username ?> </a></li>
+								<li><a class="rigister" href="<?php echo base_url().'index.php/user_authentication/logout/'?>">LOGOUT <span> </span></a></li>
+								<div class="clearfix"> </div>
+							</ul>
+
+						<?php } else { ?>
 
 							<ul class="unstyled-list list-inline">
 								<li><a class="login" href="<?php echo base_url().'index.php/user_authentication/index/'?>">LOGIN</a></li>

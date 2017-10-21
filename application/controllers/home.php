@@ -46,9 +46,15 @@ class Home extends CI_Controller {
 	}
 
 	public function admin(){
-		$data['product'] = $this->MyMod->getProduct();
-		$this->load->view('admin/list', $data);
+		if($this->session->has_userdata('admin')){
+			$data['product'] = $this->MyMod->getProduct();
+			$this->load->view('admin/list', $data);
+		}
+		else redirect('user_authentication/index');
 	}
+		 	
+
+
 	public function adminadd(){
 		$data['product'] = $this->MyMod->getProduct();
 		$this->load->view('admin/add', $data);

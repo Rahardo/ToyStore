@@ -1,6 +1,7 @@
      <h2>
        PRODUCT LIST
-     </h2>    
+     </h2>
+     <a class="rigister" href="<?php echo base_url().'index.php/user_authentication/logout/'?>">LOGOUT <span> </span></a></li>    
       <div>
         <div >
           <table class="product table">
