@@ -250,14 +250,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					<!----special-products-grids---->
 					<div class="special-products-grids">
-					 	<?php foreach($product as $d){ ?>
+
+					 	<?php $i = 0;
+					 	foreach($product as $d){ 
+
+					 		?>
 						<div class="col-md-3 special-products-grid text-center">
-							<a class="brand-name" href="single-page.html"><img src="<?php echo base_url()?><?php echo $d['productPic1']; ?>" title="name" /></a>
+							<a class="brand-name" href="single-page.html"><img src="<?php echo base_url()?>./assets/images/b0.png ?>" title="name" /></a>
 							<a class="product-here" href="single-page.html"><img src="<?php echo base_url()?><?php echo $d['productPic1']; ?>" title="product-name" /></a>
 							<h4><a href="<?php echo base_url().'index.php/home/singleProduct/'.$d['productID']?>"><?php echo $d['productName']; ?></a></h4>
 							<a class="product-btn" href="<?php echo base_url().'index.php/home/singleProduct/'.$d['productID']?>"><span><?php echo $d['productFixCost']; ?></span><small>GET NOW</small><label> </label></a>
 						</div>
-						<?php } ?>
+						<?php if (++$i == 8) break;
+						} ?>
 						<div class="clearfix"> </div>
 					</div>
 					<!---//special-products-grids---->
