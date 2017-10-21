@@ -79,11 +79,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</ul>
 						</div>
 						<div class="login-rigister">
+							
+						<?php if ( isset($this->session->userdata['logged_in'])){ 
+						$username = ($this->session->userdata['logged_in']['username']);
+						$email = ($this->session->userdata['logged_in']['email']);
+						?>
+
 							<ul class="unstyled-list list-inline">
-								<li><a class="login" href="#">Login</a></li>
-								<li><a class="rigister" href="#">REGISTER <span> </span></a></li>
+								<li><a class="login" ><?php echo $username ?> </a></li>
+								<li><a class="rigister" href="<?php echo base_url().'index.php/user_authentication/logout/'?>">LOGOUT <span> </span></a></li>
 								<div class="clearfix"> </div>
 							</ul>
+
+						<?php }else { ?>
+
+							<ul class="unstyled-list list-inline">
+								<li><a class="login" href="<?php echo base_url().'index.php/user_authentication/index/'?>">LOGIN</a></li>
+								<li><a class="rigister" href="<?php echo base_url().'index.php/user_authentication/user_registration_show/'?>">REGISTER <span> </span></a></li>
+								<div class="clearfix"> </div>
+							</ul>
+
+						<?php } ?>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -96,11 +112,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!----start-top-nav---->
 			 <nav class="top-nav main-menu">
 					<ul class="top-nav">
-						<li><a href="products.html">PRODUCTS </a><span> </span></li>
-						<li><a href="products.html">CAMPAINGS</a><span> </span></li>
-						<li><a href="products.html">SERVICES</a><span> </span></li>
-						<li><a href="products.html">BRANDS</a><span> </span></li>
-						<li><a href="products.html">ABOUT US</a></li>
+						<li><a href="<?php echo base_url()?>">PRODUCT </a><span> </span></li>
+						<li><a href="#">CAMPAINGS</a><span> </span></li>
+						<li><a href="#">SERVICES</a><span> </span></li>
+						<li><a href="#">BRANDS</a><span> </span></li>
+						<li><a href="#">ABOUT US</a></li>
 						<div class="clearfix"> </div>
 					</ul>
 					<a href="#" id="pull"><img src="<?php echo base_url()?>assets/images/nav-icon.png" title="menu" /></a>
