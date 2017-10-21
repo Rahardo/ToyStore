@@ -26,7 +26,7 @@
 					echo form_input('username');
 					echo "<div class='error_msg'>";
 				if (isset($message_display)) {
-					echo $message_display;
+						echo $message_display;
 					}
 					echo "</div>";
 					echo"<br/>";
@@ -47,7 +47,7 @@
 					echo form_submit('submit', 'Sign Up');
 					echo form_close();
 					?>
-					<a href="<?php echo base_url() ?> ">For Login Click Here</a>
+					<a href="<?php echo base_url().'index.php/user_authentication/index/' ?> ">For Login Click Here</a>
 			</div>
 		</div>
 	</body>
