@@ -7,13 +7,22 @@ class MyMod extends CI_Model {
         return $data->result_array();
     }
 
+    public function update($tabelName, $data, $where){
+        $upd = $this->db->update($tabelName, $data, $where);
+        return $upd;
+    }
+
+    public function delete($tableName, $where){
+        $res = $this->db->delete($tableName, $where);
+        return $res;
+    }
+
     public function getDtl($productID) {  
             $data = $this->db->get_where('product',array('productID'=>$productID));
             return $data->result_array();  
     }
 
     public function getCat($categoryID) {  
-            // $data = $this->db->get_where('product',array('productCategory'=>$productCategory));
             $data = $this->db->get_where('category',array('categoryID'=>$categoryID));
             return $data->result_array();  
     } 
