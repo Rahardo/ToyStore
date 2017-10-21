@@ -255,6 +255,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="clearfix"> </div>
 					</div>
 					<!----special-products-grids---->
+					
+					
 					<div class="special-products-grids">
 						<div class="col-md-3 special-products-grid text-center">
 							<a class="brand-name" href="single-page.html"><img src="<?php echo base_url()?>assets/images/b1.jpg" title="name" /></a>

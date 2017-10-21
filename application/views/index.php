@@ -83,6 +83,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 						<?php if ( isset($this->session->userdata['logged_in'])){ 
 							$username = ($this->session->userdata['logged_in']['username']);
+							$email = ($this->session->userdata['logged_in']['email']);
 							?>
 
 							<ul class="unstyled-list list-inline">
@@ -113,7 +114,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!----start-top-nav---->
 			 <nav class="top-nav main-menu">
 					<ul class="top-nav">
-						<li><a href="products.html">TITITS </a><span> </span></li>
+						<li><a href="products.html">PRODUCT </a><span> </span></li>
 						<li><a href="products.html">CAMPAINGS</a><span> </span></li>
 						<li><a href="products.html">SERVICES</a><span> </span></li>
 						<li><a href="products.html">BRANDS</a><span> </span></li>
