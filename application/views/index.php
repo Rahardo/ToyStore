@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Brnd-logo Website Template | Home :: w3layouts</title>
+		<title>Toy Store</title>
 		<link href="<?php echo base_url()?>assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="<?php echo base_url()?>assets/js/jquery.min.js"></script>
@@ -270,7 +270,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<h4><a href="<?php echo base_url().'index.php/home/singleProduct/'.$d['productID']?>"><?php echo $d['productName']; ?></a></h4>
 							<a class="product-btn" href="<?php echo base_url().'index.php/home/singleProduct/'.$d['productID']?>"><span><?php echo $d['productFixCost']; ?></span><small>GET NOW</small><label> </label></a>
 						</div>
-						<?php if (++$i == 8) break;
+						<?php if (++$i == 20) break;
 						} ?>
 						<div class="clearfix"> </div>
 					</div>

@@ -1,4 +1,4 @@
-<h4>Edit Berita</h4>
+<h4>Edit Produk</h4>
 
 <form method="POST" action="<?php echo base_url()."index.php/home/editProduct"; ?>">
     <table> 

@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Brnd-logo Website Template | Details :: w3layouts</title>
+		<title>Toy Store</title>
 		<link href="<?php echo base_url()?>assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="<?php echo base_url()?>assets/js/jquery.min.js"></script>

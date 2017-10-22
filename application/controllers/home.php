@@ -16,7 +16,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data['product'] = $this->MyMod->getProduct();
-		$data['category'] = $this->MyMod->getCategory();
+		// $data['category'] = $this->MyMod->getCategory();
 		// $data['jumlahP'] =$this->MyMod->jumlahP();
 		$this->load->view('index', $data);
 	}
@@ -28,22 +28,22 @@ class Home extends CI_Controller {
 		$this->load->view('single-page', $data);
 	}
 
-	public function product($categoryID)
-	{
-		$data['category'] = $this->MyMod->getCat($categoryID);
-		$data['product'] = $this->MyMod->getProduct();
-		// $data['jumlahP'] =$this->MyMod->jumlahP();
-		$this->load->view('products', $data);
-	}
+	// public function product($categoryID)
+	// {
+	// 	$data['category'] = $this->MyMod->getCat($categoryID);
+	// 	$data['product'] = $this->MyMod->getProduct();
+	// 	// $data['jumlahP'] =$this->MyMod->jumlahP();
+	// 	$this->load->view('products', $data);
+	// }
 
-	public function products()
-	{
-		$data['cat1'] = $this->MyMod->getProduct();
-		$data['cat2'] = $this->MyMod->getProduct();
-		$data['cat3'] = $this->MyMod->getProduct();
-		// $data['jumlahP'] =$this->MyMod->jumlahP();
-		$this->load->view('index', $data);
-	}
+	// public function products()
+	// {
+	// 	$data['cat1'] = $this->MyMod->getProduct();
+	// 	$data['cat2'] = $this->MyMod->getProduct();
+	// 	$data['cat3'] = $this->MyMod->getProduct();
+	// 	// $data['jumlahP'] =$this->MyMod->jumlahP();
+	// 	$this->load->view('index', $data);
+	// }
 
 	public function admin(){
 		if($this->session->has_userdata('admin')){
@@ -56,13 +56,19 @@ class Home extends CI_Controller {
 
 
 	public function adminadd(){
-		$data['product'] = $this->MyMod->getProduct();
-		$this->load->view('admin/add', $data);
+		if($this->session->has_userdata('admin')){
+			$data['product'] = $this->MyMod->getProduct();
+			$this->load->view('admin/add', $data);
+		}
+		else redirect('user_authentication/index');
 	}
+
 	public function adminedit($productID){
-		// $data['product'] = $this->MyMod->getProduct();
-		$data['product'] = $this->MyMod->getDtl($productID);
-		$this->load->view('admin/edit', $data);
+		if($this->session->has_userdata('admin')){
+			$data['product'] = $this->MyMod->getDtl($productID);
+			$this->load->view('admin/edit', $data);
+		}
+		else redirect('user_authentication/index');
 	}
 
 
@@ -96,20 +102,9 @@ class Home extends CI_Controller {
 				'productPic2' => $target2,
 				'productPic3' => $target3
 			);
-
-			// if(is_uploaded_file($_FILES['productPic1']['tmp_name'])){
-			// 	move_uploaded_file($_FILES['productPic1']['tmp_name'], $target1);
-			// 	echo "berhasil";
-
-
-			// } else {
-			// 	echo "salah";
-			// }
-
 			$res = $this->db->insert('product', $data_insert) or trigger_error(mysql_error().$sql);
 		}
 		redirect('home/admin');
-        // $this->load->view('admin/blog/blog', $data);
 	}
  
     function editProduct($productID)
@@ -148,7 +143,4 @@ class Home extends CI_Controller {
 			redirect('home/admin');
 		}
 	}
-
-
-}
-?>
+}?>
