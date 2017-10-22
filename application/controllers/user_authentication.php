@@ -11,18 +11,15 @@ Class User_Authentication extends CI_Controller {
 
 	public function index() {
 		if($this->session->has_userdata('logged_in')){
-				redirect('home/index' );
-			}
+				redirect('home/index' );}
 			else if($this->session->has_userdata('admin')){
-				redirect('home/index' );
-			}
+				redirect('home/index' );}
 		else $this->load->view('login_form');
 	}
 
 	public function user_registration_show() {
 		if($this->session->has_userdata('logged_in')){
-				redirect('home/index' );
-			}
+				redirect('home/index' );}
 			else if($this->session->has_userdata('admin')){
 				redirect('home/index' );
 			}
@@ -80,23 +77,18 @@ Class User_Authentication extends CI_Controller {
 
 			if ($username == 'admin' && $password == 'admin'){
 				$this->session->set_userdata('admin', $username);
-				redirect('home/admin' );
-			}
+				redirect('home/admin' );}
 
 			if ($result == TRUE) {
 				$username = $this->input->post('username');
 				$result = $this->login_database->read_user_information($username);
-				if ($result != false && $username == 'admin' && $password == admin) {
-					$this->session->set_userdata('admin', $session_data);
-					redirect('home/admin' );
-				} else {
-					$session_data = array(
-					'username' => $result[0]->user_name,
-					'email' => $result[0]->user_email,
-					);
-					$this->session->set_userdata('logged_in', $session_data);
+				
+                                    $session_data = array(
+                                    'username' => $result[0]->user_name,
+                                    'email' => $result[0]->user_email,
+                                    );
+                                $this->session->set_userdata('logged_in', $session_data);
 				redirect('home/index' );
-				}
 			} else {
 				$data = array(
 				'error_message' => 'Invalid Username or Password'
