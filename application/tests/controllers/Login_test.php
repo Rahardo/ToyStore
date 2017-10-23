@@ -96,6 +96,8 @@ class Login_test extends TestCase
             $_SESSION['logged_in'] = "logged_in";
             $_SESSION['admin'] = "admin";
             $this->request('GET', 'user_authentication/logout');
+            $this->assertFalse(isset($_SESSION['logged_in']));
+            $this->assertFalse(isset($_SESSION['admin']));
             $this->assertRedirect('home/index');
     }
         
