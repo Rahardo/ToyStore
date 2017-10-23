@@ -248,7 +248,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="special-products">
 					<div class="s-products-head">
 						<div class="s-products-head-left">
-							<h3>SPECIAL <span>PRODUCTS</span></h3>
+							<h3>SPECIAL <span>PRODUCT</span></h3>
 						</div>
 						<div class="s-products-head-right">
 							<a href="products.html"><span> </span>view all products</a>
