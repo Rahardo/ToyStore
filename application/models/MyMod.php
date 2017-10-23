@@ -56,8 +56,6 @@ class MyMod extends CI_Model {
             else return array();
         }
 
-
-
 }
 
 ?>

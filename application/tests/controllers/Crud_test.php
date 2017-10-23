@@ -31,53 +31,23 @@ class Crud_test extends TestCase
             $this->assertEquals($total_setelah, $totalsebelum+1);
             $this->assertRedirect('home/admin');
     }
-    
-//    public function test_editProduct(){
-//        $productID = '50';
-//        $productName = '50';
-//        $productCategory =  '50';
-//        $productOverview = '50';
-//        $productDetail = '50';
-//        $productCost =  '50';
-//        $productDisc = '50';
-//        $productFixCost = '50';
-//            
-//           $sebelum = $this->obj->getTotProd();
-//           $this->assertEquals(1, $sebelum);
-//           $setelah = $this->obj->getTotProd();
-//           $this->assertEquals(0, $setelah);
-//           $this->request('POST', 'home/editProduct/1',
-//                [
-//                'productName' => '1',
-//                'productCategory' => '1',
-//                'productOverview' => '1',
-//                'productDetail' => '1',
-//                'productCost' => '1',
-//                'productDisc' => '1',
-//                'productFixCost' => '1',
-//                ]);
-//           $sebelum2 = $this->obj->getTotProd();
-//           $this->assertEquals(0, $sebelum2);
-//           $setelah2 = $this->obj->getTotProd();
-//           $this->assertEquals(1, $setelah2);
-//        }
-        
+            
     public function test_editProduct(){
         $output = $this->request('POST', 'home/editProduct/51',
             [
-                'productName' => '1',
-                'productCategory' => '1',
-                'productOverview' => '1',
-                'productDetail' => '1',
-                'productCost' => '1',
-                'productDisc' => '1',
-                'productFixCost' => '1',
+                'productName' => 'test',
+                'productCategory' => 'test',
+                'productOverview' => 'test',
+                'productDetail' => 'test',
+                'productCost' => '111',
+                'productDisc' => '111',
+                'productFixCost' => '111',
             ]);
         $updated = $this->CI->MyMod->find(51);
         $actual1 = $update->productName;
         $actual2 = $update->productCategory;
-        $this->assertEquals('1', $actual1);
-        $this->assertEquals('1', $actual2);
+        $this->assertEquals('test', $actual1);
+        $this->assertEquals('test', $actual2);
     }
     
     public function test_deleteProduct(){

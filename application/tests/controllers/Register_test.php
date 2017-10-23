@@ -3,19 +3,19 @@
 class Register_test extends TestCase
 {
     
-//    public function test_userAuthentication_new_user_registration()
-//	{	
-//		$output = $this->request(
-//			'POST',
-//			'user_authentication/new_user_registration',
-//				[
-//                                    'username' => 'ardo2',
-//                                    'email_value' => 'ardo@ise.com',
-//                                    'password' => 'ardo2'
-//				]
-//		);
-//		$this->assertContains('<title>Login Form</title>', $output);
-//	}
+    public function test_userAuthentication_new_user_registration()
+	{	
+		$output = $this->request(
+			'POST',
+			'user_authentication/new_user_registration',
+				[
+                                    'username' => '2',
+                                    'email_value' => '1@1',
+                                    'password' => '2'
+				]
+		);
+		$this->assertContains('<title>Login Form</title>', $output);
+	}
         
     public function test_userAuthentication_new_user_registration_alreadyExist()
 	{	
@@ -24,7 +24,7 @@ class Register_test extends TestCase
 			'user_authentication/new_user_registration',
 				[
                                     'username' => 'rahardo',
-                                    'email_value' => 'rahardo@rahardo',
+                                    'email_value' => 'rahardoo@rahardo',
                                     'password' => 'rahardo'
 				]
 		);
