@@ -217,7 +217,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<span><img src="<?php echo base_url()?>assets/images/obj1.png" title="name" /></span>
 							<h4>TOTAL</h4>
 							<label>357 PRODUCTS</label>
-							<a class="r-list-w" href="<?php echo base_url().'index.php/home/product/'.$category[0]['categoryID']?>"><img src="<?php echo base_url()?>assets/images/list-icon.png" title="list" /></a>
+							<a class="r-list-w" href="#"><img src="<?php echo base_url()?>assets/images/list-icon.png" title="list" /></a>
 						</div>
 					</div>
 					<div class="col-xs-4">
@@ -227,7 +227,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<span><img src="<?php echo base_url()?>assets/images/obj2.png" title="name" /></span>
 							<h4>TOTAL</h4>
 							<label>357 PRODUCTS</label>
-							<a class="r-list-w" href="<?php echo base_url().'index.php/home/product/'.$category[1]['categoryID']?>"><img src="<?php echo base_url()?>assets/images/list-icon.png" title="list" /></a>
+							<a class="r-list-w" href="#"><img src="<?php echo base_url()?>assets/images/list-icon.png" title="list" /></a>
 						</div>
 					</div>
 					<div class="col-xs-4">
@@ -237,7 +237,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<span><img src="<?php echo base_url()?>assets/images/obj3.png" title="name" /></span>
 							<h4>TOTAL</h4>
 							<label>357 PRODUCTS</label>
-							<a class="r-list-w" href="<?php echo base_url().'index.php/home/product/'.$category[2]['categoryID']?>"><img src="<?php echo base_url()?>assets/images/list-icon.png" title="list" /></a>
+							<a class="r-list-w" href="#"><img src="<?php echo base_url()?>assets/images/list-icon.png" title="list" /></a>
 						</div>
 					</div>
 					<vdi class="clearfix"> </div>
@@ -270,7 +270,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<h4><a href="<?php echo base_url().'index.php/home/singleProduct/'.$d['productID']?>"><?php echo $d['productName']; ?></a></h4>
 							<a class="product-btn" href="<?php echo base_url().'index.php/home/singleProduct/'.$d['productID']?>"><span><?php echo $d['productFixCost']; ?></span><small>GET NOW</small><label> </label></a>
 						</div>
-						<?php if (++$i == 20) break;
+						<?php if (++$i == 8) break;
 						} ?>
 						<div class="clearfix"> </div>
 					</div>
