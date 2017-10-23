@@ -44,8 +44,8 @@ class Crud_test extends TestCase
                 'productFixCost' => '111',
             ]);
         $updated = $this->CI->MyMod->find(51);
-        $actual1 = $update->productName;
-        $actual2 = $update->productCategory;
+        $actual1 = $updated->productName;
+        $actual2 = $updated->productCategory;
         $this->assertEquals('test', $actual1);
         $this->assertEquals('test', $actual2);
     }
