@@ -22,20 +22,39 @@ class MyMod extends CI_Model {
             return $data->result_array();  
     }
 
-    public function getCat($categoryID) {  
-            $data = $this->db->get_where('category',array('categoryID'=>$categoryID));
-            return $data->result_array();  
-    } 
-
-    public function getCategory($where=""){
-        $data = $this->db->query('SELECT * FROM category '.$where);
-        return $data->result_array();
+    public function getTotProd(){
+            $total = $this->db->get('product');
+            return $total->num_rows();
     }
 
-    public function getUser($where=""){
-        $data = $this->db->query('SELECT * FROM user '.$where);
-        return $data->result_array();
-    }
+//    public function getTotUser(){
+//            $total = $this->db->get('user_login');
+//            return $total->num_rows();
+//    }
+
+    // public function getCat($categoryID) {  
+    //         $data = $this->db->get_where('category',array('categoryID'=>$categoryID));
+    //         return $data->result_array();  
+    // } 
+
+    // public function getCategory($where=""){
+    //     $data = $this->db->query('SELECT * FROM category '.$where);
+    //     return $data->result_array();
+    // }
+
+//    public function getUser($where=""){
+//        $data = $this->db->query('SELECT * FROM user '.$where);
+//        return $data->result_array();
+//    }
+
+    public function find($productID){
+            $result = $this->db->where('productID', $productID)
+                               ->limit(1)
+                               ->get('product');
+            if($result->num_rows()>0)
+                return $result->row();
+            else return array();
+        }
 
 
 

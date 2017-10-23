@@ -21,8 +21,7 @@ Class User_Authentication extends CI_Controller {
 		if($this->session->has_userdata('logged_in')){
 				redirect('home/index' );}
 			else if($this->session->has_userdata('admin')){
-				redirect('home/index' );
-			}
+				redirect('home/index' );}
 		else $this->load->view('registration_form');
 	}
 
@@ -57,12 +56,9 @@ Class User_Authentication extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE) {
 			if($this->session->has_userdata('logged_in')){
-				redirect('home/index' );
-			}
+				redirect('home/index' );}
 			else if($this->session->has_userdata('admin')){
-				redirect('home/index' );
-
-			}else{
+				redirect('home/index' );}else{
 				$this->load->view('login_form');
 			}
 
@@ -88,8 +84,8 @@ Class User_Authentication extends CI_Controller {
                                     'email' => $result[0]->user_email,
                                     );
                                 $this->session->set_userdata('logged_in', $session_data);
-				redirect('home/index' );
-			} else {
+				redirect('home/index' );} 
+                                else {
 				$data = array(
 				'error_message' => 'Invalid Username or Password'
 				);
@@ -99,12 +95,12 @@ Class User_Authentication extends CI_Controller {
 	}
 
 	public function logout() {
-		$sess_array = array('username' => '');
-		$this->session->unset_userdata('logged_in', $sess_array);
-        $this->session->sess_destroy();
-		$data['message_display'] = 'Successfully Logout';
-		redirect('home/index');
-	}
+            $sess_array = array('username' => '');
+            $this->session->unset_userdata('logged_in', $sess_array);
+            $this->session->unset_userdata('admin', $sess_array);
+            $this->session->sess_destroy();
+            $data['message_display'] = 'Successfully Logout';
+            redirect('home/index');}
 }
 
 ?>

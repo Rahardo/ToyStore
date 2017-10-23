@@ -16,13 +16,10 @@ public function registration_insert($data) {
 
 		// Query to insert data in database
 		$this->db->insert('user_login', $data);
-	if ($this->db->affected_rows() > 0) {
-		return true;
-	}
-	} else {
-		return false;
-	}
-}
+            if ($this->db->affected_rows() > 0) {
+                    return true;}} 
+        else {
+		return false;}}
 
 // Read data using username and password
 public function login($data) {
@@ -52,10 +49,7 @@ public function read_user_information($username) {
 	$query = $this->db->get();
 
 	if ($query->num_rows() == 1) {
-		return $query->result();
-	} else {
-		return false;
-	}
+		return $query->result();} 
 }
 
 }

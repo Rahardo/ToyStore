@@ -1,48 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="CodeIgniter Application Test Suite" tests="28" assertions="40" failures="1" errors="0" time="1.279764">
-    <testsuite name="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" fullPackage="Login" tests="9" assertions="21" failures="1" errors="0" time="0.452311">
-      <testcase name="test_user_login_process_tolakSessionUser" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="6" assertions="1" time="0.041996"/>
-      <testcase name="test_user_login_process_tolakSessionAdmin" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="12" assertions="1" time="0.032808"/>
-      <testcase name="test_user_login_process_masukAdmin" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="18" assertions="2" time="0.061682">
-        <failure type="PHPUnit_Framework_ExpectationFailedException">Login_test::test_user_login_process_masukAdmin
-Failed asserting that two strings are equal.
---- Expected
-+++ Actual
-@@ @@
--'admin'
-+'a'
+  <testsuite name="CodeIgniter Application Test Suite" tests="37" assertions="51" failures="1" errors="0" time="1.913617">
+    <testsuite name="Crud_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Crud_test.php" fullPackage="Crud" tests="3" assertions="5" failures="1" errors="0" time="0.412969">
+      <testcase name="test_createProduct" class="Crud_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Crud_test.php" line="10" assertions="2" time="0.202583"/>
+      <testcase name="test_editProduct" class="Crud_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Crud_test.php" line="65" assertions="1" time="0.069950">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">Crud_test::test_editProduct
+Failed asserting that null matches expected '1'.
 
-E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php:25
+E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Crud_test.php:79
 </failure>
       </testcase>
-      <testcase name="test_user_login_process_masukUser" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="28" assertions="2" time="0.051134"/>
-      <testcase name="test_aksi_login_nousername" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="38" assertions="3" time="0.059080"/>
-      <testcase name="test_aksi_login_nopassword" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="49" assertions="3" time="0.053847"/>
-      <testcase name="test_aksi_login_usernameunmatch" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="60" assertions="3" time="0.046907"/>
-      <testcase name="test_aksi_login_passwordunmatch" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="72" assertions="3" time="0.048963"/>
-      <testcase name="test_aksi_login_usernamepasswordunmatch" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="84" assertions="3" time="0.055894"/>
+      <testcase name="test_deleteProduct" class="Crud_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Crud_test.php" line="83" assertions="2" time="0.140436"/>
     </testsuite>
-    <testsuite name="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" fullPackage="View" tests="19" assertions="19" failures="0" errors="0" time="0.827453">
-      <testcase name="test_home_index" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="13" assertions="1" time="0.073463"/>
-      <testcase name="test_home_index_session" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="19" assertions="1" time="0.070289"/>
-      <testcase name="test_singleProduct" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="28" assertions="1" time="0.045831"/>
-      <testcase name="test_singleProduct_index_session" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="34" assertions="1" time="0.047393"/>
-      <testcase name="test_home_admin_nosession" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="43" assertions="1" time="0.033827"/>
-      <testcase name="test_home_admin_session_admin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="49" assertions="1" time="0.083581"/>
-      <testcase name="test_home_admin_session_nonadmin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="56" assertions="1" time="0.029099"/>
-      <testcase name="test_home_adminadd_nosession" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="64" assertions="1" time="0.028839"/>
-      <testcase name="test_home_adminadd_session_admin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="70" assertions="1" time="0.035141"/>
-      <testcase name="test_home_adminadd_session_nonadmin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="77" assertions="1" time="0.034753"/>
-      <testcase name="test_home_adminedit_nosession" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="85" assertions="1" time="0.032291"/>
-      <testcase name="test_home_adminedit_session_admin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="91" assertions="1" time="0.033575"/>
-      <testcase name="test_home_adminedit_session_nonadmin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="98" assertions="1" time="0.053255"/>
-      <testcase name="test_userAuthentic_index_nosession" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="106" assertions="1" time="0.054813"/>
-      <testcase name="test_userAuthentic_index_session_admin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="112" assertions="1" time="0.036234"/>
-      <testcase name="test_userAuthentic_index_session_nonadmin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="119" assertions="1" time="0.034456"/>
-      <testcase name="test_userAuthentic_registration_nosession" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="127" assertions="1" time="0.037493"/>
-      <testcase name="test_userAuthentic_registration_session_admin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="133" assertions="1" time="0.032122"/>
-      <testcase name="test_userAuthentic_registration_session_nonadmin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="140" assertions="1" time="0.030998"/>
+    <testsuite name="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" fullPackage="Login" tests="10" assertions="22" failures="0" errors="0" time="0.488438">
+      <testcase name="test_user_login_process_tolakSessionUser" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="5" assertions="1" time="0.051474"/>
+      <testcase name="test_user_login_process_tolakSessionAdmin" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="11" assertions="1" time="0.033058"/>
+      <testcase name="test_user_login_process_masukAdmin" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="17" assertions="2" time="0.043384"/>
+      <testcase name="test_user_login_process_masukUser" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="27" assertions="2" time="0.045652"/>
+      <testcase name="test_user_login_process_nousername" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="37" assertions="3" time="0.061642"/>
+      <testcase name="test_user_login_process_nopassword" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="48" assertions="3" time="0.044103"/>
+      <testcase name="test_user_login_process_usernameunmatch" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="59" assertions="3" time="0.044861"/>
+      <testcase name="test_user_login_process_passwordunmatch" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="71" assertions="3" time="0.050611"/>
+      <testcase name="test_user_login_process_usernamepasswordunmatch" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="83" assertions="3" time="0.075488"/>
+      <testcase name="test_logout" class="Login_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Login_test.php" line="95" assertions="1" time="0.038165"/>
+    </testsuite>
+    <testsuite name="Register_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Register_test.php" fullPackage="Register" tests="5" assertions="5" failures="0" errors="0" time="0.217904">
+      <testcase name="test_userAuthentication_new_user_registration_alreadyExist" class="Register_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Register_test.php" line="20" assertions="1" time="0.045825"/>
+      <testcase name="test_userAuthentication_new_user_registration_null" class="Register_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Register_test.php" line="34" assertions="1" time="0.049170"/>
+      <testcase name="test_userAuthentication_new_user_registration_Username_null" class="Register_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Register_test.php" line="49" assertions="1" time="0.041717"/>
+      <testcase name="test_userAuthentication_new_user_registration_email_value_null" class="Register_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Register_test.php" line="63" assertions="1" time="0.041423"/>
+      <testcase name="test_userAuthentication_new_user_registration_password_null" class="Register_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\Register_test.php" line="77" assertions="1" time="0.039769"/>
+    </testsuite>
+    <testsuite name="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" fullPackage="View" tests="19" assertions="19" failures="0" errors="0" time="0.794306">
+      <testcase name="test_home_index" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="13" assertions="1" time="0.051956"/>
+      <testcase name="test_home_index_session" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="19" assertions="1" time="0.056481"/>
+      <testcase name="test_singleProduct" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="28" assertions="1" time="0.043773"/>
+      <testcase name="test_singleProduct_index_session" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="34" assertions="1" time="0.045573"/>
+      <testcase name="test_home_admin_nosession" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="43" assertions="1" time="0.030090"/>
+      <testcase name="test_home_admin_session_admin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="49" assertions="1" time="0.115330"/>
+      <testcase name="test_home_admin_session_nonadmin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="56" assertions="1" time="0.034164"/>
+      <testcase name="test_home_adminadd_nosession" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="64" assertions="1" time="0.029512"/>
+      <testcase name="test_home_adminadd_session_admin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="70" assertions="1" time="0.033679"/>
+      <testcase name="test_home_adminadd_session_nonadmin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="77" assertions="1" time="0.037611"/>
+      <testcase name="test_home_adminedit_nosession" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="85" assertions="1" time="0.030464"/>
+      <testcase name="test_home_adminedit_session_admin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="91" assertions="1" time="0.034085"/>
+      <testcase name="test_home_adminedit_session_nonadmin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="98" assertions="1" time="0.029758"/>
+      <testcase name="test_userAuthentic_index_nosession" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="106" assertions="1" time="0.033974"/>
+      <testcase name="test_userAuthentic_index_session_admin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="112" assertions="1" time="0.054040"/>
+      <testcase name="test_userAuthentic_index_session_nonadmin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="119" assertions="1" time="0.033302"/>
+      <testcase name="test_userAuthentic_registration_nosession" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="127" assertions="1" time="0.036643"/>
+      <testcase name="test_userAuthentic_registration_session_admin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="133" assertions="1" time="0.031829"/>
+      <testcase name="test_userAuthentic_registration_session_nonadmin" class="View_test" file="E:\Application\XAMPP\htdocs\ToyStore\application\tests\controllers\View_test.php" line="140" assertions="1" time="0.032043"/>
     </testsuite>
   </testsuite>
 </testsuites>
