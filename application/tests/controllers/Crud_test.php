@@ -40,7 +40,7 @@ class Crud_test extends TestCase
                 'productOverview' => 'test',
                 'productDetail' => 'test',
                 'productCost' => '111',
-                'productDisc' => '111',
+                'productDisc' => '11',
                 'productFixCost' => '111',
             ]);
         $updated = $this->CI->MyMod->find(51);
@@ -59,3 +59,4 @@ class Crud_test extends TestCase
     }
 }
 
+?>

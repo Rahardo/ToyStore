@@ -120,23 +120,43 @@ class Home extends CI_Controller {
         $productCost =  $_POST['productCost'];
         $productDisc = $_POST['productDisc'];
         $productFixCost = $_POST['productFixCost'];
-        $update_product = array(
-                'productID' => $productID,
-                'productName' => $productName,
-                'productCategory' => $productCategory,
-                'productOverview' => $productOverview,
-                'productDetail' => $productDetail,
-                'productCost' => $productCost,
-                'productDisc' => $productDisc,
-                'productFixCost' => $productFixCost,
-        );
-        $where = array('productID' => $productID);
-        $upd = $this->MyMod->update('product', $update_product, $where);
-        if ($upd >= 1) {
-                redirect('home/admin');
-        } else {
-                echo "Gagal";
+
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('productID', 'Product ID', 'required');
+        $this->form_validation->set_rules('productName', 'Product Name', 'required');
+        $this->form_validation->set_rules('productCategory', 'Product Category', 'required');
+        $this->form_validation->set_rules('productOverview', 'Product Overview', 'required');
+        $this->form_validation->set_rules('productDetail', 'Product Detail', 'required');
+        $this->form_validation->set_rules('productCost', 'Product Cost', 'required|integer');
+        $this->form_validation->set_rules('productDisc', 'Product Disc', 'required|less_than[100|integer]');
+        $this->form_validation->set_rules('productFixCost', 'Product Fix Cost', 'required|integer');
+
+        if ($this->form_validation->run() == FALSE){
+                        echo "Data harus terisi dengan benar";
         }
+        else{
+                
+                        $update_product = array(
+                        'productID' => $productID,
+                        'productName' => $productName,
+                        'productCategory' => $productCategory,
+                        'productOverview' => $productOverview,
+                        'productDetail' => $productDetail,
+                        'productCost' => $productCost,
+                        'productDisc' => $productDisc,
+                        'productFixCost' => $productFixCost,
+                        );
+
+                        $where = array('productID' => $productID);
+                        $upd = $this->MyMod->update('product', $update_product, $where);
+                        
+                    if ($upd >= 1) {
+                                redirect('home/admin');
+                    } else {
+                            echo "Gagal";
+                    }
+                
+            }
     }
  
     function deleteProduct($productID){

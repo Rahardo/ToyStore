@@ -89,3 +89,4 @@ class Register_test extends TestCase
 	}
 }
 
+?>

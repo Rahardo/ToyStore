@@ -144,3 +144,4 @@ class View_test extends TestCase
 		$this->assertRedirect('home/index' );
 	}
 }
+?>
