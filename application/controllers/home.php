@@ -135,7 +135,6 @@ class Home extends CI_Controller {
                         echo "Data harus terisi dengan benar";
         }
         else{
-                
                         $update_product = array(
                         'productID' => $productID,
                         'productName' => $productName,
@@ -154,8 +153,7 @@ class Home extends CI_Controller {
                                 redirect('home/admin');
                     } else {
                             echo "Gagal";
-                    }
-                
+                    }   
             }
     }
  
