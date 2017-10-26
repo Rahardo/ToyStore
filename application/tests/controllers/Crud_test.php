@@ -32,7 +32,7 @@ class Crud_test extends TestCase
             $this->assertRedirect('home/admin');
     }
             
-    public function test_editProduct(){
+    /*public function test_editProduct(){
         $output = $this->request('POST', 'home/editProduct/51',
             [
                 'productName' => 'test',
@@ -48,7 +48,7 @@ class Crud_test extends TestCase
         $actual2 = $updated->productCategory;
         $this->assertEquals('test', $actual1);
         $this->assertEquals('test', $actual2);
-    }
+    }*/
     
     public function test_deleteProduct(){
         $expext = $this->obj->getTotProd()-1;
